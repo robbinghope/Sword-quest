@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sword Quest Menu</title> 
+    <style>
+      body
+      {
+        background-color: #512815; /*Brown background*/
+
+      }
+      #title
+      {
+        color: #72655f;
+        text-align: center;
+        font-size: 60px;
+      }
+      #menu
+      {
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        text-align: center;
+        background-color: #72655f;
+        color: #512815;
+      }
+      #menu td:hover
+      {
+        background-color: red;
+        cursor: grab;
+      }
+      #menu table
+      {
+        width: 500px;
+        font-size: 80px;
+      }
+    </style>
+    <script>
+      function newGame()
+      {
+        window.open("http://jpelletierwebtech.altervista.org/Game/Game.php","_self");
+      }
+      function viewLeaderboard()
+      {       
+        window.open("http://jpelletierwebtech.altervista.org/Game/Leaderboard.php","_self");
+      }
+      function closeWindow() 
+      {
+        if (confirm("Close Window?")) 
+        {
+          close();
+        }
+      }
+    </script>
+  </head>
+  <body><!-- BEGIN AV_TOOLBAR -->
+<div id="av_toolbar_regdiv">
+<div class="av_site"><a target="_blank" href="https://en.altervista.org/?utm_campaign=toolbar&amp;utm_source=link&amp;utm_medium=link" title="Sites, blogs and web hosting gratis">Get a site</a></div>
+</div>
+<script type="text/javascript">
+(function(d, s) {
+	var fjs = d.getElementsByTagName(s)[0], js = d.createElement(s);
+	js.src = "//tb.altervista.org/js/script.js?1";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script'));
+</script>
+<!-- END AV_TOOLBAR -->
+
+    <div id = "title">
+      <h1>Welcome to Sword Quest!</h1>
+    </div>
+    <div id = "menu">
+      <table>
+        <tr><td id="new" onclick="newGame();">New Game</td></tr>
+        <tr><td id="settings" onclick="viewLeaderboard();">Leaderboard</td></tr>
+        <tr><td id="quit" onclick="closeWindow();">Quit</td></tr>
+      </table>
+    </div>
+  </body>
+</html>
